@@ -30,7 +30,7 @@ resource "aws_db_instance" "this" {
   count = var.create ? 1 : 0
 
   identifier        = local.identifier
-  identifier_prefix = local.identifier_prefix
+  
 
   engine                   = local.is_replica ? null : var.engine
   engine_version           = var.engine_version
